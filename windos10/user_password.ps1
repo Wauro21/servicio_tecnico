@@ -17,7 +17,7 @@ While($condition){
   $password = Read-Host "Ingrese nueva contraseña"
     if($password -eq (Read-Host "Re-ingrese contraseña")){
     $condition = 0
-    $password = ConvertTo-SecureString $p1 -AsPlainText -Force
+    $password = ConvertTo-SecureString $password -AsPlainText -Force
     $UserAccount = Get-LocalUser -Name $usuario
     $UserAccount | Set-LocalUser -Password $password
     Write-Host "Se ha modificado la contraseña"
