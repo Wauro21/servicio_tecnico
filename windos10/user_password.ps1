@@ -14,17 +14,15 @@ Write-Host "El nombre de usuario se ha actualizado a"
 #Codigo para cambiar contraseña:
 $condition = 1 #para el While
 While($condition){
-$password = Read-Host "Ingrese nueva contraseña"
-if($password -eq (Read-Host "Re-ingrese contraseña")){
-$condition = 0
-$password = ConvertTo-SecureString $p1 -AsPlainText -Force
-$UserAccount = Get-LocalUser -Name $usuario
-$UserAccount | Set-LocalUser -Password $password
-Write-Host "Se ha modificado la contraseña"
+  $password = Read-Host "Ingrese nueva contraseña"
+    if($password -eq (Read-Host "Re-ingrese contraseña")){
+    $condition = 0
+    $password = ConvertTo-SecureString $p1 -AsPlainText -Force
+    $UserAccount = Get-LocalUser -Name $usuario
+    $UserAccount | Set-LocalUser -Password $password
+    Write-Host "Se ha modificado la contraseña"
+    }
+    Else {
+    Write-Host "¡Las contraseñas no coinciden!"
+    }
 }
-Else {
-Write-Host "¡Las contraseñas no coinciden!"
-}
-}
-
-
