@@ -1,5 +1,6 @@
 ECHO OFF
 CLS
+powershell Set-ExecutionPolicy Unrestricted -Force
 ECHO %~dp
 :: Se comprueba si se tiene privilegios de administrador
 powershell $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent());if(-not($currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))){Write-Host "¡Usted no posee privilegios de administrador! Cierre esta ventana para reintentar." ;while(1){}}
@@ -8,6 +9,11 @@ ECHO "Iniciando SCRIPT"
 SET address=%cd%\script.ps1
 powershell address
 ECHO "El equipo eliminara el script y cerrara sesion a continuacion"
-::CIERRE DE SESION
-::ELIMINACION SCRIPT
+::RESTAURACION DE SERVICIO SCRIPTS
+powershell Set-ExecutionPolicy Restricted -Force
+ECHO Se ha finalizado el cambio de usuario/contraseña. A continuacion se cerrara sesión y se limpiaran los archivos temporales.
 PAUSE
+::CIERRE DE SESION
+SHUTDOWN /L /T 30
+::ELIMINACION SCRIPT
+
