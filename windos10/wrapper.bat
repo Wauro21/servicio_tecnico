@@ -11,8 +11,8 @@ ECHO "El equipo eliminara el script y cerrara sesion a continuacion"
 ::RESTAURACION DE SERVICIO SCRIPTS
 powershell Set-ExecutionPolicy Restricted -Force
 ECHO "Se ha finalizado el cambio de usuario/contraseña. A continuacion se cerrara sesión y se limpiaran los archivos temporales, guarde todo el trabajo del equipo."
-PAUSE
+TIMEOUT /t 30
 ::CIERRE DE SESION
-SHUTDOWN /l /t 30
+SHUTDOWN /l
 ::ELIMINACION SCRIPT
 
