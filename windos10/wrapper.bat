@@ -13,6 +13,6 @@ powershell Set-ExecutionPolicy Restricted -Force
 ECHO "Se ha finalizado el cambio de usuario/contraseña. A continuacion se cerrara sesión y se limpiaran los archivos temporales, guarde todo el trabajo del equipo."
 PAUSE
 ::CIERRE DE SESION
-SHUTDOWN -l -t 30
+SHUTDOWN /l /t 30
 ::ELIMINACION SCRIPT
 
