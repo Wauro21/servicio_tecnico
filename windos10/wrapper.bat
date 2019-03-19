@@ -6,7 +6,7 @@ powershell Set-ExecutionPolicy Unrestricted -Force
 ::Conseguir mejor manera de tener directorio, no asumirlo
 ECHO "Iniciando SCRIPT"
 SET address=%~dp0script.ps1
-powershell address
+powershell %address%
 ECHO "El equipo eliminara el script y cerrara sesion a continuacion"
 ::RESTAURACION DE SERVICIO SCRIPTS
 powershell Set-ExecutionPolicy Restricted -Force
