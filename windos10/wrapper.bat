@@ -7,7 +7,6 @@ powershell Set-ExecutionPolicy Unrestricted -Force
 ECHO Iniciando SCRIPT
 SET address=%~dp0script.ps1
 powershell %address%
-ECHO El equipo eliminara el script y cerrara sesion a continuacion
 ::RESTAURACION DE SERVICIO SCRIPTS
 powershell Set-ExecutionPolicy Restricted -Force
 ECHO Se ha finalizado el cambio de usuario/contraseña. A continuacion se cerrara sesión y se limpiaran los archivos temporales, guarde todo el trabajo del equipo.
