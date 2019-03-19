@@ -7,7 +7,7 @@ $usuario = Read-Host "Ingrese el nuevo nombre de usuario para su equipo"
 #Cambiar forma en que se consigue el nombre de usuaro actual
 Rename-LocalUser -Name $env:UserName -NewName $usuario
 #Completar
-Write-Host "El nombre de usuario se ha actualizado a"
+Write-Host "El nombre de usuario se ha actualizado"
 #completar con el nombre de usuario actualizado
 
 #Sistema para determinar si usuario quiere contraseña o no
