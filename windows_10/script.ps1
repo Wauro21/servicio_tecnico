@@ -8,7 +8,7 @@ $greetMsg = "Bienvenido. ¡Este SCRIPT le ayudara a cambiar su nombre de usuario
 $dispSesionName = "-> Su nombre de usuario actual es: $env:UserName"
 $newUserMsg = "Ingrese el nuevo nombre de usuario para su equipo: "
 #Script
-$newUserConfMsg = "El nuevo nombre de usuario será: " $usuario "< Confirma el nuevo nombre de usuario [y/n]? >"
+$newUserConfMsg = "El nuevo nombre de usuario será: $usuario < Confirma el nuevo nombre de usuario [y/n]? >"
 Write-Host $greetMsg
 # Loop hasta que el usuario este satisfecho
 $newUserNameConf = "n"
