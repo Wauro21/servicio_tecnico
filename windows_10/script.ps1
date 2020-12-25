@@ -7,15 +7,15 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding =
 $greetMsg = "Bienvenido. ¡Este SCRIPT le ayudara a cambiar su nombre de usuario y contraseña en Windows 10! Siga las instrucciones a continuación:"
 $dispSesionName = "-> Su nombre de usuario actual es: $env:UserName"
 $newUserMsg = "Ingrese el nuevo nombre de usuario para su equipo: "
+
 #Script
-$newUserConfMsg = "El nuevo nombre de usuario será: $usuario < Confirma el nuevo nombre de usuario [y/n]? >"
 Write-Host $greetMsg
 # Loop hasta que el usuario este satisfecho
 $newUserNameConf = "n"
 While($newUserNameConf -ne "y"){
     Write-Host $dispSesionName
     $usuario = Read-Host $newUserMsg
-    $newUserNameConf = Read-Host $newUserConfMsg
+    $newUserNameConf = Read-Host "El nuevo nombre de usuario será: $usuario < Confirma el nuevo nombre de usuario [y/n]? >"
 }
 #Cambiar forma en que se consigue el nombre de usuaro actual
 Rename-LocalUser -Name $env:UserName -NewName $usuario
