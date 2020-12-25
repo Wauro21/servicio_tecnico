@@ -21,7 +21,7 @@ Write-Host "El nombre de usuario se ha actualizado"
 #Codigo para cambiar contraseña:
 $condition = 1 #para el While
 While($condition){
-  $password = Read-Host "Ingrese nueva contraseña"
+  $password = Read-Host "Ingrese nueva contraseña [En caso no querer usar contraseña, deje en blanco y presione enter]"
     if($password -eq (Read-Host "Re-ingrese contraseña")){
     $condition = 0
     If($password.length -ne 0){
