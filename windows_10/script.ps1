@@ -28,7 +28,7 @@ While($condition){
         $password = ConvertTo-SecureString $password -AsPlainText -Force
     }
     Else{
-        $password = ''
+        $password = [securestring]::new()
     }
     $UserAccount = Get-LocalUser -Name $usuario
     $UserAccount | Set-LocalUser -Password $password
