@@ -1,3 +1,7 @@
+#Test
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding =
+                    New-Object System.Text.UTF8Encoding
+
 #Mensajes Pre-definidos
 
 $greetMsg = "Bienvenido. ¡Este SCRIPT le ayudara a cambiar su nombre de usuario y contraseña en Windows 10! Siga las instrucciones a continuación:"
